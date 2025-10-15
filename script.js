@@ -1,36 +1,49 @@
 const canvas = document.getElementById('projectCanvas');
 const ctx = canvas.getContext('2d');
 
-// Fondo (background)
-ctx.fillStyle = "rgb(144, 207, 232)";
-ctx.fillRect(0, 0, 400, 400);
+const eyes = 30;
+const tooths = 20;
 
-// Suelo (fill, rect)
-ctx.fillStyle = "rgb(13, 222, 13)";
-ctx.fillRect(0, 300, 400, 100);
-
-// Sol (fill, ellipse -> arc)
-ctx.fillStyle = "rgb(247, 221, 24)";
-ctx.beginPath();
-ctx.arc(80, 64, 50, 0, Math.PI * 2);
-ctx.fill();
-
-// Muñeco de nieve (fill, ellipse -> arc)
-ctx.fillStyle = "rgb(255, 255, 255)";
+ctx.fillStyle = "white";
 ctx.strokeStyle = "black";
 ctx.lineWidth = 2;
 
+// Orejas (ellipse)
 ctx.beginPath();
-ctx.arc(200, 300, 75, 0, Math.PI * 2);
+ctx.ellipse(150, 70, 30, 60, 0, 0, Math.PI * 2);
 ctx.fill();
 ctx.stroke();
 
 ctx.beginPath();
-ctx.arc(200, 200, 50, 0, Math.PI * 2);
+ctx.ellipse(240, 70, 30, 60, 0, 0, Math.PI * 2);
 ctx.fill();
 ctx.stroke();
 
+// Cara
 ctx.beginPath();
-ctx.arc(200, 120, 37.5, 0, Math.PI * 2);
+ctx.ellipse(200, 170, 75, 75, 0, 0, Math.PI * 2);
 ctx.fill();
 ctx.stroke();
+
+// Ojos
+ctx.fillStyle = "black";
+ctx.beginPath();
+ctx.ellipse(170, 150, eyes / 2, eyes / 2, 0, 0, Math.PI * 2);
+ctx.fill();
+
+ctx.beginPath();
+ctx.ellipse(230, 150, eyes / 2, eyes / 2, 0, 0, Math.PI * 2);
+ctx.fill();
+
+// Boca
+ctx.beginPath();
+ctx.moveTo(150, 200);
+ctx.lineTo(250, 200);
+ctx.stroke();
+
+// Dientes (noFill -> strokeRect)
+ctx.fillStyle = "white";
+ctx.strokeRect(185, 200, 15, tooths);
+ctx.fillRect(185, 200, 15, tooths);
+ctx.strokeRect(200, 200, 15, tooths);
+ctx.fillRect(200, 200, 15, tooths);
