@@ -2,13 +2,53 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Dientes de Conejo</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Portafolio de Proyectos Gráficos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
-<body>
-    <h1>Dientes de Conejo</h1>
-    <canvas id="projectCanvas" width="400" height="400"></canvas>
-    <a href="../index.html">← Volver al Portafolio</a>
-    <script src="script.js"></script>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto px-4 py-12">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Portafolio de Proyectos Gráficos</h1>
+            <p class="mt-4 text-lg text-gray-600">Migración de Khan Academy a HTML5 Canvas</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <a href="muneco_nieve/index.html" class="block bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300 card-hover">
+                <h2 class="text-xl font-semibold text-blue-600">1. Muñeco de Nieve</h2>
+            </a>
+            <a href="dia_nevado/index.html" class="block bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300 card-hover">
+                <h2 class="text-xl font-semibold text-blue-600">2. Día Nevado Soleado</h2>
+            </a>
+            <a href="cena/index.html" class="block bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300 card-hover">
+                <h2 class="text-xl font-semibold text-blue-600">3. ¿Qué hay de Cena?</h2>
+            </a>
+            <a href="conejo/index.html" class="block bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300 card-hover">
+                <h2 class="text-xl font-semibold text-blue-600">4. Dientes de Conejo</h2>
+            </a>
+            <a href="rana/index.html" class="block bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300 card-hover">
+                <h2 class="text-xl font-semibold text-blue-600">5. Rana</h2>
+            </a>
+            <a href="sol_explota/index.html" class="block bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300 card-hover">
+                <h2 class="text-xl font-semibold text-blue-600">6. Sol que Explota</h2>
+            </a>
+            <a href="nubes/index.html" class="block bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300 card-hover">
+                <h2 class="text-xl font-semibold text-blue-600">7. Nubes que se Separan</h2>
+            </a>
+            <a href="estrella_fugaz/index.html" class="block bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300 card-hover">
+                <h2 class="text-xl font-semibold text-blue-600">8. Estrella Fugaz</h2>
+            </a>
+        </main>
+    </div>
+
 </body>
 </html>
